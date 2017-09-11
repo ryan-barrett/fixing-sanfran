@@ -3,4 +3,7 @@
 <p>Fixing SanFran is a project designed to give everyone the opportunity to bring city issues to the attention of those elected to do something about it.</p>
 
 <h3>User Stories:</h3>
-<p> Users will be able to either publically or anonymously leave "issues" with the city. Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps. Additionally users will be prompted to contact the proper authorities regarding their issue depending on where it is located. 
+<ul> 
+  <li>Users will be able to either publically or anonymously leave "issues" with the city.</li> 
+  <li>Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps.</li> <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place</li>
+</ul>
