@@ -9,4 +9,4 @@
 </ul>
 <hr/>
 
-[Imgur](https://i.imgur.com/CNiHAgy.jpg)
+![Imgur](https://i.imgur.com/CNiHAgy.jpg)
