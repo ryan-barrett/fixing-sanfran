@@ -6,6 +6,7 @@
 <ul> 
   <li>Users will be able to either publically or anonymously leave an "issue" with the city.</li> 
   <li>Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps.</li> <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place.</li>
+  <li> Users will be able to rate currently existing issues</li>
 </ul>
 <hr/>
 
