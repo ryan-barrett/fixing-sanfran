@@ -1,6 +1,6 @@
 <h3>Fixing SanFran</h3>
 
-<p>Fixing SanFran is a project designed to give everyone the opportunity to bring city issues to the attention of those elected to do something about it.</p>
+<p>Fixing SanFran is a project designed to give everyone the opportunity to bring city issues to the attention of their representatives.</p>
 <hr/>
 <h3>User Stories:</h3>
 <ul> 
