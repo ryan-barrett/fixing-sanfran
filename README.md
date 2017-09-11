@@ -1,25 +1,6 @@
-# README
+<h3>Fixing SanFran</h3>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p>Fixing SanFran is a project designed to give everyone the opportunity to bring city issues to the attention of those elected to do something about it.</p>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# fixing-sanfran
+<h3>User Stories:</h3>
+<p> Users will be able to either publically or anonymously leave "issues" with the city. Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps. Additionally users will be prompted to contact the proper authorities regarding their issue depending on where it is located. 
