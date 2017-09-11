@@ -8,4 +8,4 @@
   <li>Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps.</li> <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place</li>
 </ul>
 
-![database_structure](https://imgur.com/a/T5yKm)
+![database_structure](https://i.imgur.com/a/T5yKm.jpg)
