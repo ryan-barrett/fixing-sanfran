@@ -5,8 +5,9 @@
 <h3>User Stories:</h3>
 <ul> 
   <li>Users will be able to either publically or anonymously leave an "issue" with the city.</li> 
-  <li>Users will be able to upload an image of the issue, leave a text description, and mark the location on google maps.</li> <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place.</li>
-  <li> Users will be able to rate currently existing issues.</li>
+  <li>Users will be able to use a form to leave an issue. The add issue form will be located on the issues page and will be visible via modal. An issue will include: a text description, an address, and optionally will be able to upload an image using paperclip.</li> 
+  <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place. This will be done via modal placed on currently existing issues.</li>
+  <li> Users will be able to rate currently existing issues to ensure the authenticity of the issue. Issues which are rated poorly or as false will be automatically removed.</li>
 </ul>
 <hr/>
 
