@@ -11,7 +11,7 @@
 </ul>
 <hr/>
 
-![Imgur](https://i.imgur.com/20ETHG0.jpg)
+![Imgur](https://i.imgur.com/CQ6fBSO.jpg)
 
 <hr/>
 
