@@ -9,6 +9,7 @@
   <li> Users will be able to rate currently existing issues.</li>
 </ul>
 <hr/>
+
 <h3><Wireframes:</h3>
 
 ![Imgur](https://i.imgur.com/Up60fP3.jpg)
