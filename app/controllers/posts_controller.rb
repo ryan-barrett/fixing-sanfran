@@ -10,10 +10,14 @@ class PostsController < ApplicationController
     end
 
     def create
-    post = Post.new(post_params)
-    # post[:user_id] = current_user.id
-    # post[:topic_id] = params[:id].to_i
+    post = Post.new(post_params)  #issue: unable to submit post unless signed in
+    if @current_user == false
+      post[:user_id] = 0
+    else
+    post[:user_id] = current_user.id
+    end
     puts post.inspect
+
 
     if post.save
       redirect_to posts_path
@@ -53,7 +57,7 @@ class PostsController < ApplicationController
   private
 
 def post_params
-  params.require(:post).permit(:title,:description,:location)
+  params.require(:post).permit(:title,:description,:location,:user_id)
 end
 
 
