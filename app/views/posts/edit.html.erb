@@ -1,0 +1,24 @@
+<% flash.each do |name, msg| %>
+<div class="red-text"><%= msg %></div>
+<% end %>
+<%= form_for @post do |f| %>
+<div class="grey lighten-4 z-depth-3">
+  <div class="container">
+    <h3 class="center-align">Edit Post</h3>
+    <div>
+      <h5>Title:</h5>
+      <%= f.text_field :title %>
+      <h5>Description:</h5>
+      <%= f.text_field :description %>
+      <h5>Address:</h5>
+      <%= f.text_field :location %>
+    </div>
+    <div class="center-align">
+      <%= f.submit "Save Post", class:"btn-flat"%>
+      <%= link_to "Cancel", post_path(@post.id), class:"btn-flat"%>
+      <br />
+    </div>
+  </div>
+</div>
+<% end %>
+      
