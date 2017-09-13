@@ -4,7 +4,7 @@
 <hr/>
 <h3>User Stories:</h3>
 <ul>
-  <li>Users will be able to create an account, sign in, and customize a profile </li>
+  <li>Users will be able to create an account, sign in, and customize a profile. </li>
   <li>Users will be able to either publically or anonymously leave an "issue" with the city.</li>
   <li>Users will be able to use a form to leave an issue. The add issue form will be located on the issues page and will be visible via modal. An issue will include: a text description, an address, and optionally users can upload an image displaying evidence of the problem using paperclip.</li>
   <li>Users will be prompted to contact the proper authorities regarding their issue depending on where the issue is taking place. This will be done via modal placed on currently existing issues.</li>
