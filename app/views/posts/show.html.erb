@@ -1,7 +1,7 @@
 <div class="row grey lighten-4 z-depth-3">
   <div class="container center-align">
-    <%= link_to "Back", posts_path, class:"btn-flat"%>
-    <%= link_to "Edit Post", edit_post_path(@post.id), class:"btn-flat"%>
+    <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
+    <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
   </div>
   <!-- <h3 class="left-align container"><%= @post.id %> -->
     <%= @post.title %>
@@ -12,10 +12,11 @@
       <a href="http://<%= @post.location %>"><%= @post.location%></a>
     </h5>
     <div class="white">
-
     </div>
+    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+    class: 'img-fluid img-rounded', alt: "#{@post.title} on the map"%>
   </div>
   <div class="center-align">
-    <%= button_to "Delete", @post, method: :delete %>
+    <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
   </div>
 </div>
