@@ -1,6 +1,5 @@
-Login
-
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+<div class = "login-container">
+  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
   <div>
     <%= f.text_field :user_name, placeholder: "Username" %>
   </div>
@@ -8,4 +7,5 @@ Login
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
   <%= f.submit "Log In" %>
-<% end %>
+  <% end %>
+</div>
