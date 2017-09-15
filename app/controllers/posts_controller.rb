@@ -34,6 +34,12 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(post_id)
   end
 
+  def map
+    post_id = params[:id]
+    @posts = Post.all
+  end
+
+
   def edit
     post_id = params[:id]
     @post = Post.find_by_id(post_id)

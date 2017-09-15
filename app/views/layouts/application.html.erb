@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtX_St1BZyOxl7rZa0OLumZt93aRUQE8&callback=initMap" async defer></script>
   </head>
   <body>
     <nav class='blue z-depth-0'>
@@ -14,11 +15,18 @@
           <div class='col s12'>
             <a href='/' class='brand-logo' target=''>Fixing SanFran</a>
             <ul class='right hide-on-med-and-down'>
+              <li class = "flash-msg">
+                <% flash.each do |name, msg| %>
+                <p>
+                  <small> <%= name.capitalize %>: <%= msg %> </small>
+                </p>
+                <% end %>
+              </li>
               <li>
                 <a href='https://github.com/ryan-barrett/fixing-sanfran' target="_blank">About</a>
               </li>
               <% if current_user %>
-              <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
+              <!-- <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li> -->
               <li><%= link_to "Log Out", logout_path %></li>
               <% else %>
               <li><%= link_to "Create Account", new_user_path %></li>
@@ -42,13 +50,10 @@
       </div>
     </nav>
 
-    <% flash.each do |name, msg| %>
-    <p>
-      <small> <%= name.capitalize %>: <%= msg %> </small>
-    </p>
-    <% end %>
+
 
     <%= yield %>
+
+
   </body>
   </html>
-            

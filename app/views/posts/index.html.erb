@@ -1,11 +1,15 @@
 <div class="center-align grey lighten-4">
+  <%= link_to "New Issue", new_post_path, class:"waves-effect waves-light btn new-post"%>
+</div>
   <div class="container grey lighten-4">
     <br/>
-    <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
   </div>
+
+    <!-- <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
+  <!-- </div> -->
   <!-- Dropdown Trigger -->
   <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
+  <!-- <ul id='dropdown1' class='dropdown-content'>
     <li>
       <a class="grey-text text-darken-2" href="#!">
         <i class="material-icons ">thumb_up</i>Votes</a>
@@ -15,19 +19,22 @@
         <i class="material-icons ">access_time</i>Time</a>
     </li>
     <li>
-      <a class="grey-text text-darken-2" href="#!">
-        <i class="material-icons ">person</i>Yours</a>
+      <a class="grey-text text-darken-2" href="#!"> -->
+        <!-- <i class="material-icons ">person</i>Yours</a>
     </li>
   </ul>
-</div>
+</div> -->
+
 <br/>
-<% @posts.each do |post| %>
-<div class="col s11 card-content black-text">
-  <h1 class="title" href="http://<%= post.description %>" target="_blank">
-    <%= link_to post.title, post_path(post.id)%>
-  </h1>
-</div>
-<% end %>
-<div class="center-align grey lighten-4">
-  <%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
+<div class = "post-container">
+  <% @posts.each do |post| %>
+  <div class="col s11 card-content black-text row card #fafafa hoverable post-index">
+    <h1 class="title" href="http://<%= post.description %>" target="_blank">
+      <%= link_to post.title, post_path(post.id)%>
+    </h1>
+  </div>
+  <% end %>
+  <div class="center-align grey lighten-4 post-home">
+    <%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
+  </div>
 </div>

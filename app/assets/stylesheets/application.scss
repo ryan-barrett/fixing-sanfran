@@ -35,6 +35,56 @@
 
 .delete-button {
   background-color: red;
-  width: 10%;
-  height: auto;
+}
+
+.new-post {
+  margin-top: 15px;
+}
+
+.post-container {
+  text-align: center;
+}
+
+.flash-msg {
+  text-align: center;
+  position: relative;
+  right: 5%;
+  color: black;
+}
+
+.post-index {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+
+.post-home {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+
+.manip-buttons {
+  float: left;
+  position: relative;
+  bottom: 8px;
+}
+
+.post-content {
+  position: relative;
+  right: 38%;
+}
+
+.back-button {
+}
+
+.media-body {
+  flex: 1;
+  display: inline-block;
+  overflow: auto;
+  height: 150px;
+  width: 70%;
+  border: 1px solid black;
+  position: relative;
+  left: 38%;
 }
