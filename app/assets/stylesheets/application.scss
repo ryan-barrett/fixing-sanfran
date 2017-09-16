@@ -67,24 +67,25 @@
 .manip-buttons {
   float: left;
   position: relative;
-  bottom: 8px;
+  bottom: 12px;
 }
 
 .post-content {
-  position: relative;
-  right: 38%;
 }
 
 .back-button {
 }
 
 .media-body {
-  flex: 1;
-  display: inline-block;
-  overflow: auto;
-  height: 150px;
-  width: 70%;
-  border: 1px solid black;
+  // border: 1px solid black;
+  word-wrap: break-word;
   position: relative;
-  left: 38%;
+  left: 25%;
+  width: 50%;
+}
+
+.post-title {
+  position: relative;
+  right: 39.5%;
+  top: 15px;
 }

@@ -1,7 +1,7 @@
 <div class="row grey lighten-4 z-depth-3">
     <div class="container left-align manip-buttons">
       <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
-      <br>
+    
       <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
     </div>
     <!-- <h3 class="left-align container"><%= @post.id %> -->
@@ -9,13 +9,13 @@
   <!-- </h3> -->
   <div class="container center-align">
     <div class = "post-content">
+      <div class = "post-title">
+        <h5><a href="http://<%= @post.title %>"><%= @post.title%></a></h5>
+      </div>
       <div class = "media-body">
         <p><%= @post.description %></p>
       </div>
-      <h5>
-        <a href="http://<%= @post.location %>"><%= @post.location%></a>
-      </h5>
-  </div>
+    </div>
     <div class="white">
     </div>
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
