@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+
+<a href="http://<%= post.location %>"></a>
+
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{post.latitude},#{post.longitude}&markers=#{post.latitude},#{post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+class: 'img-fluid img-rounded', alt: "#{post.title} on the map"%>
+
+<% end %>
+
+
+<div id = "map">
+</div>

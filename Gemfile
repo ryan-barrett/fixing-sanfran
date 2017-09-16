@@ -8,8 +8,12 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+#add paperclip gem (image uploading)
+gem 'paperclip', '~> 5.0.0'
 # add jquery
 gem 'jquery-rails', '~> 4.3.1'
+#for google maps integration
+gem 'geocoder'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # add materialize gem

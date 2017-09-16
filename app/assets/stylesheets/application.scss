@@ -32,3 +32,60 @@
   position: relative;
   bottom: 60px;
 }
+
+.delete-button {
+  background-color: red;
+}
+
+.new-post {
+  margin-top: 15px;
+}
+
+.post-container {
+  text-align: center;
+}
+
+.flash-msg {
+  text-align: center;
+  position: relative;
+  right: 5%;
+  color: black;
+}
+
+.post-index {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+
+.post-home {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
+
+.manip-buttons {
+  float: left;
+  position: relative;
+  bottom: 12px;
+}
+
+.post-content {
+}
+
+.back-button {
+}
+
+.media-body {
+  // border: 1px solid black;
+  word-wrap: break-word;
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
+
+.post-title {
+  position: relative;
+  right: 39.5%;
+  top: 15px;
+}
