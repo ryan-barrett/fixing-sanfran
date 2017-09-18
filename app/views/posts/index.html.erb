@@ -1,6 +1,10 @@
+<% user = current_user %>
+<% is_loggedin = user ? @current_user : false %>
 <div class = "post-index-content grey lighten-5">
   <div class="center-align grey lighten-4">
-    <%= link_to "New Issue", new_post_path, class:"waves-effect waves-light btn new-post"%>
+    <% if is_loggedin %>
+      <%= link_to "New Issue", new_post_path, class:"waves-effect waves-light btn new-post"%>
+    <% end %>
   </div>
     <div class="container grey lighten-4">
       <br/>

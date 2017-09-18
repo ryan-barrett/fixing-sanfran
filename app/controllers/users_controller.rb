@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     login(@user) # <-- log the user in
-    redirect_to @user # <-- go to show
+    redirect_to home_path # <-- go to show
   end
 
   def show
