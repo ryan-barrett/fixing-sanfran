@@ -3,6 +3,16 @@
       <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
       <br>
       <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
+      <div class="upload">
+        <h2>Issue Image</h2>
+        <%= form_for :post, html:{ multipart: true } do |f| %>
+        <span>Image</span>
+        <%= f.file_field :image %>
+        <div class="actions">
+        <%= f.submit "Add Image", class:"btn-flat"%>
+        </div>
+        <% end %>
+      </div>
     </div>
     <!-- <h3 class="left-align container"><%= @post.id %> -->
     <!-- <%= @post.title %> -->
@@ -18,11 +28,14 @@
     </div>
     <div class="white">
     </div>
-      <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
+    <div>
+      <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("evidence here") %>
+    </div>
       <br>
       <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
       class: 'img-fluid img-rounded', alt: "#{@post.title} on the map"%>
     </div>
+    <br>
     <div class = "center-align back-button">
       <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
     </div>
