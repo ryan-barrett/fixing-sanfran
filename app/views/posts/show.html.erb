@@ -1,9 +1,13 @@
 <div class="row grey lighten-4 z-depth-3">
-    <div class="container left-align manip-buttons">
+  <div class = "row manip-buttons">
+    <div class="col s1">
       <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
-      <br>
+    </div>
+    <div class = "col s1">
       <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
-      <div class="upload">
+    </div>
+  </div>
+      <div class="upload add-image">
         <h2>Issue Image</h2>
         <%= form_for :post, html:{ multipart: true } do |f| %>
         <span>Image</span>
@@ -13,30 +17,30 @@
         </div>
         <% end %>
       </div>
-    </div>
-    <!-- <h3 class="left-align container"><%= @post.id %> -->
-    <!-- <%= @post.title %> -->
-  <!-- </h3> -->
-  <div class="container center-align">
-    <div class = "post-content">
-      <div class = "post-title">
-        <h5><a href="http://<%= @post.title %>"><%= @post.title%></a></h5>
+      <!-- <h3 class="left-align container"><%= @post.id %> -->
+      <!-- <%= @post.title %> -->
+      <!-- </h3> -->
+      <div class="container center-align">
+        <div class = "post-content">
+          <div class = "post-title">
+            <h5><a href="http://<%= @post.title %>"><%= @post.title%></a></h5>
+          </div>
+          <div class = "media-body">
+            <p><%= @post.description %></p>
+          </div>
+        </div>
+        <div class="row show-images">
+          <div class="col s6">
+            <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
+            <br>
+          </div>
+          <div class="col s6">
+            <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+            class: 'img-fluid img-rounded', alt: "#{@post.title} on the map"%>
+          </div>
+        </div>
+        <br>
+        <div class = "center-align back-button">
+          <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
+        </div>
       </div>
-      <div class = "media-body">
-        <p><%= @post.description %></p>
-      </div>
-    </div>
-    <div class="white">
-    </div>
-    <div>
-      <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("evidence here") %>
-    </div>
-      <br>
-      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
-      class: 'img-fluid img-rounded', alt: "#{@post.title} on the map"%>
-    </div>
-    <br>
-    <div class = "center-align back-button">
-      <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
-    </div>
-  </div>
