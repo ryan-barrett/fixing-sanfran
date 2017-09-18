@@ -11,4 +11,9 @@ has_attached_file :image, styles: { large: "600x600>", medium: "400x400>", thumb
 #validating post submission
 validates :title, :description, :location, presence: true
 
+#Hiding post_id in the url
+def to_param
+  title
+end
+
 end
