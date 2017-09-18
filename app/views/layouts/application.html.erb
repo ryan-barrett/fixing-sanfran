@@ -7,9 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtX_St1BZyOxl7rZa0OLumZt93aRUQE8&callback=initMap" async defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href=".../assets/images/favicon.ico" />
   </head>
   <body>
-    <nav class='blue z-depth-0'>
+    <nav class='indigo lighten-1 z-depth-0'>
       <div class='nav-wrapper'>
         <div class='row'>
           <div class='col s12'>
@@ -35,25 +36,8 @@
             </ul>
           </div>
         </div>
-        <ul class='side-nav' id='mobile-demo'>
-          <li>
-            <a href='#' target='_blank'>About Us</a>
-          </li>
-          <% if current_user %>
-          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-          <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-          <% end %>
-        </ul>
       </div>
     </nav>
-
-
-
     <%= yield %>
-
-
-  </body>
+    </body>
   </html>

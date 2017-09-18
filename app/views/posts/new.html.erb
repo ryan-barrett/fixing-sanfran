@@ -1,4 +1,4 @@
-<%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
+<%= link_to "Back", posts_path, class:"waves-effect waves-light btn back-button"%>
 <% flash.each do |name, msg| %>
 <div class="red-text"><%= msg %></div>
 <% end %>
@@ -6,15 +6,20 @@
 <%= form_for :post, url: "/posts", method: "post" do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
-    <h3 class="center-align">Create New Post</h3>
+    <h3 class="center-align">Create New Issue</h3>
     <h5>Title:</h5>
     <%= f.text_field :title %>
     <h5>Description:</h5>
     <%= f.text_field :description %>
     <h5>Address:</h5>
     <%= f.text_field :location %>
-    <%= f.submit "Submit", class:"btn-flat"%>
+    <h5> Type: </h5>
+    <%= f.select :type, Post.all, { prompt: "Choose a category" }, class: "browser-default" %>
     <br>
+    <button class="btn waves-effect waves-light center-align new-post-button" type="submit" name="action">Submit
+      <i class="material-icons right">add_box</i>
+    </button>
     <% end %>
   </div>
+  <br>
 </div>
