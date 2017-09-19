@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170918180512) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-    t.string "type"
+    t.string "issue_type"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
