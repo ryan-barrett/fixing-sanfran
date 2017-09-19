@@ -13,8 +13,9 @@
     <div class = "post-container">
       <% @posts.each do |post| %>
       <div class="col s11 card-content black-text row card #fafafa hoverable post-index">
+
         <h1 class="title" href="http://<%= post.description %>" target="_blank">
-          <%= link_to post.title, post_path(post.id)%>
+          [<%= post.issue_type %>] <%= link_to post.title, post_path(post.id)%>
         </h1>
       </div>
       <% end %>

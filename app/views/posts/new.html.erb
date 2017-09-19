@@ -14,7 +14,7 @@
     <h5>Address:</h5>
     <%= f.text_field :location %>
     <h5> Type: </h5>
-    <%= f.select :type, Post.all, { prompt: "Choose a category" }, class: "browser-default" %>
+    <%= f.select :issue_type, ['Public Health','Safety','Infrastructure','Other'], { prompt: "Choose a category" }, class: "browser-default" %>
     <br>
     <button class="btn waves-effect waves-light center-align new-post-button" type="submit" name="action">Submit
       <i class="material-icons right">add_box</i>
