@@ -70,18 +70,19 @@
         Support for this issue: <a href = "http://sfpublicworks.org/about/contact-us" target = "_blank">Here</a>
       </div>
       <div class = "show-images">
+        <div class="row center-align uploaded-show">
+          <div class="col s6">
+            <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
+          </div>
+        </div>
         <div class = "row center-align">
           <div class="col s6 show-map">
             <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
             class: 'img-fluid img-rounded', alt: "#{@post.title} on the map"%>
           </div>
         </div>
-        <div class="row center-align uploaded-show">
-          <div class="col s6">
-            <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
-          </div>
-        </div>
       </div>
     </div>
   </div>
   <% end %>
+      
