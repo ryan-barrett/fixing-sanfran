@@ -6,8 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-#Heroku compatability
-gem 'activerecord-jdbcpostgresql-adapter'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 #add paperclip gem (image uploading)
