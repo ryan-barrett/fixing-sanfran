@@ -1,21 +1,20 @@
 class PostsController < ApplicationController
-
   def index
     @posts = Post.all
   end
 
   def new
-      @post = Post.new
-      @current_user = current_user
+    @post = Post.new
+    @current_user = current_user
     end
 
   def create
-    post = Post.new(post_params)  #issue: unable to submit post unless signed in
-    if @current_user == false
-      post[:user_id] = 0
-    else
-      post[:user_id] = current_user.id
-    end
+    post = Post.new(post_params) # issue: unable to submit post unless signed in
+    post[:user_id] = if @current_user == false
+                       0
+                     else
+                       current_user.id
+                     end
     puts post.inspect
 
     puts post.errors.messages
@@ -23,11 +22,10 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       puts post.errors.messages
-      flash[:notice]=post.errors.messages
+      flash[:notice] = post.errors.messages
       render :new
     end
   end
-
 
   def show
     post_id = params[:id]
@@ -39,12 +37,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-
   def edit
     post_id = params[:id]
     @post = Post.find_by_id(post_id)
   end
-
 
   def update
     post_id = params[:id]
@@ -62,9 +58,7 @@ class PostsController < ApplicationController
 
   private
 
-def post_params
-  params.require(:post).permit(:title,:description,:location,:user_id,:longitude,:latitude, :image, :issue_type)
-end
-
-
+  def post_params
+    params.require(:post).permit(:title, :description, :location, :user_id, :longitude, :latitude, :image, :issue_type)
+  end
 end

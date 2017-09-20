@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-
-  def index
-  end
+  def index; end
 
   def new
     # we make a new user
@@ -19,12 +17,9 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
   end
 
-
-
   private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :user_name, :password)
   end
-
 end

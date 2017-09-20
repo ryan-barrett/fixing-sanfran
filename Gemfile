@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
-
+#rubocop
+gem 'rubocop', require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 #add paperclip gem (image uploading)
