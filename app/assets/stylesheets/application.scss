@@ -67,7 +67,7 @@
 .manip-buttons {
   position: relative;
   left: 41%;
-  bottom: 70px;
+  bottom: 140px;
 }
 
 .edit-button {
@@ -76,6 +76,9 @@
 }
 
 .post-content {
+  position: relative;
+  left: 15%;
+  bottom: 160px;
 }
 
 .back-button {
@@ -104,8 +107,8 @@
 
 .add-image {
   position: relative;
-  bottom: 45px;
-  left: 1%;
+  top: 85px;
+  left: 4%;
 }
 
 .uploaded-show {
@@ -134,5 +137,41 @@
 
 .show-map {
   position: relative;
-  left: 5%;
+  left: 8%;
+  bottom: 160px;
+}
+
+.issue-support {
+  position: relative;
+  left: 15%;
+  bottom: 140px;
+}
+
+.post-content2 {
+  position: relative;
+  left: 17%;
+  bottom: 160px;
+}
+
+.uploaded-show2 {
+  position: relative;
+  left: 8%;
+}
+
+.show-map2 {
+  position: relative;
+  left: 6%;
+  bottom: 80px;
+}
+
+.issue-support2 {
+  position: relative;
+  left: 1%;
+  top: 30px;
+}
+
+.zoomed {
+  zoom: 1.3;
+  -moz-transform: scale(3);
+  -moz-transform-origin: 0 0;
 }

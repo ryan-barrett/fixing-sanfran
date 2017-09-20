@@ -16,6 +16,11 @@
     <% end %>
   </div>
   <div class="container center-align show-content">
+    <div class="row center-align uploaded-show">
+      <div class="col s6">
+        <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
+      </div>
+    </div>
     <div class="post-content">
       <div class="post-title">
         <h5>
@@ -30,12 +35,10 @@
       Support for this issue:
       <a href="http://sfpublicworks.org/about/contact-us" target="_blank">Here</a>
     </div>
+  </div>
+
     <div class="show-images">
-      <div class="row center-align uploaded-show">
-        <div class="col s6">
-          <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
-        </div>
-      </div>
+
       <div class="row center-align show-map">
         <div class="col s6">
           <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", class: 'img-fluid img-rounded',
@@ -61,7 +64,12 @@
     <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
   </div>
   <div class="container center-align show-content2">
-    <div class="post-content">
+    <div class="row center-align uploaded-show">
+      <div class="col s6">
+        <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
+      </div>
+    </div>
+    <div class="post-content2">
       <div class="post-title">
         <h5>
           <a href="http://<%= @post.title %>"><%= @post.title%></a>
@@ -70,19 +78,16 @@
       <div class="media-body">
         <p><%= @post.description %></p>
       </div>
-    </div>
-    <div class="issue-support">
-      Support for this issue:
-      <a href="http://sfpublicworks.org/about/contact-us" target="_blank">Here</a>
-    </div>
-    <div class="show-images">
-      <div class="row center-align uploaded-show">
-        <div class="col s6">
-          <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("") %>
-        </div>
+      <div class="issue-support2">
+        Support for this issue:
+        <a href="http://sfpublicworks.org/about/contact-us" target="_blank">Here</a>
       </div>
+    </div>
+
+    <div class="show-images">
+
       <div class="row center-align">
-        <div class="col s6 show-map">
+        <div class="col s6 show-map2">
           <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", class: 'img-fluid img-rounded',
           alt: "#{@post.title} on the map"%>
         </div>
