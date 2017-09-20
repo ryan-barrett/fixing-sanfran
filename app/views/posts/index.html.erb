@@ -14,10 +14,10 @@
     <% @posts.each do |post| %>
     <div class="col s11 card-content black-text row card #fafafa hoverable post-index">
 
-      <h1 class="title" href="http://<%= post.description %>" target="_blank">
+      <h3 class="title" href="http://<%= post.description %>" target="_blank">
         [<%= post.issue_type %>]
         <%= link_to post.title, post_path(post.id)%>
-      </h1>
+      </h3>
     </div>
     <% end %>
     <div class="center-align grey lighten-4 post-home">
