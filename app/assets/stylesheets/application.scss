@@ -106,6 +106,8 @@
 .show-images {
   // position: relative;
   // left: 17%;
+  display: block;
+  text-align: center;
 }
 
 .add-image {
@@ -135,7 +137,7 @@
 }
 
 .show-background {
-  height: 1200px;
+  height: 800px;
 }
 
 .show-map {
@@ -171,6 +173,7 @@
   position: relative;
   left: 1%;
   top: 30px;
+  padding: 60px;
 }
 
 .zoomed {
@@ -180,10 +183,12 @@
 }
 
 .google-map {
-  height: 300px;
+  display: block;
+  text-align: center;
 }
 
 .user-img {
   height: auto;
   width: 180%;
+  // padding-bottom: 50px;
 }
