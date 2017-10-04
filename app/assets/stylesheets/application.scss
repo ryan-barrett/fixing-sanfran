@@ -79,7 +79,7 @@
 
 .post-content {
   position: relative;
-  left: 18%;
+  left: 17%;
   bottom: 160px;
 }
 
@@ -91,10 +91,10 @@
 .media-body {
   // border: 1px solid black;
   word-wrap: break-word;
-  position: relative;
-  left: 30%;
-  bottom: 40px;
-  width: 40%;
+  // position: relative;
+  // left: 30%;
+  // bottom: 40px;
+  // width: 40%;
 }
 
 .post-title {
@@ -104,8 +104,8 @@
 }
 
 .show-images {
-  position: relative;
-  left: 17%;
+  // position: relative;
+  // left: 17%;
 }
 
 .add-image {
@@ -139,9 +139,9 @@
 }
 
 .show-map {
-  position: relative;
-  left: 8%;
-  bottom: 160px;
+  // position: relative;
+  // left: 8%;
+  // bottom: 160px;
 }
 
 .issue-support {
@@ -151,9 +151,9 @@
 }
 
 .post-content2 {
-  position: relative;
-  left: 18%;
-  bottom: 160px;
+  // position: relative;
+  // left: 17%;
+  // bottom: 160px;
 }
 
 .uploaded-show2 {
@@ -162,9 +162,9 @@
 }
 
 .show-map2 {
-  position: relative;
-  left: 6%;
-  bottom: 80px;
+  // position: relative;
+  // left: 6%;
+  // bottom: 80px;
 }
 
 .issue-support2 {
@@ -177,4 +177,13 @@
   zoom: 1.07;
   -moz-transform: scale(3);
   -moz-transform-origin: 0 0;
+}
+
+.google-map {
+  height: 300px;
+}
+
+.user-img {
+  height: auto;
+  width: 180%;
 }
