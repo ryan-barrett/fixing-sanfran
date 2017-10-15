@@ -4,6 +4,11 @@
   <div class="center-align grey lighten-4">
     <% if is_loggedin %>
     <%= link_to "New Issue", new_post_path, class:"waves-effect waves-light btn new-post"%>
+    <% else %>
+    <ul>
+      <li><%= link_to "Create Account", new_user_path, class:"waves-effect waves-light btn new-post" %></li>
+      <li><%= link_to "Log In", login_path, class:"waves-effect waves-light btn new-post" %></li>
+    </ul>
     <% end %>
   </div>
   <div class="container grey lighten-4">
