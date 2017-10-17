@@ -68,8 +68,10 @@
 
 .manip-buttons {
   position: relative;
-  left: 41%;
-  bottom: 140px;
+  // left: 21%;
+  // bottom: 140px;
+  display: block;
+  text-align: center;
 }
 
 .edit-button {
@@ -79,8 +81,8 @@
 
 .post-content {
   position: relative;
-  left: 17%;
-  bottom: 160px;
+  // left: 17%;
+  bottom: 30px;
 }
 
 .back-button {
@@ -99,7 +101,7 @@
 
 .post-title {
   position: relative;
-  bottom: 55px;
+  padding-bottom: 15px;
   word-wrap: break-word;
 }
 
@@ -111,9 +113,9 @@
 }
 
 .add-image {
-  position: relative;
-  top: 85px;
-  left: 4%;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .uploaded-show {
@@ -123,7 +125,6 @@
 
 .show-content {
   position: relative;
-  bottom: 70px;
 }
 
 .show-content2 {
@@ -147,9 +148,7 @@
 }
 
 .issue-support {
-  position: relative;
-  left: 17%;
-  bottom: 140px;
+  padding-bottom: 20px;
 }
 
 .post-content2 {

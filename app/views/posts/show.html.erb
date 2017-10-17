@@ -1,68 +1,22 @@
 <% user = current_user %>
 <% is_owner = user ? user.id == @post.user_id : false %>
 <% if is_owner %>
-<div class="grey lighten-5">
-  <div class="center-align lighten-4 back-button">
-    <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
-  </div>
-  <div class="upload add-image">
-    <h3>Upload Image</h3>
-    <%= form_for :post, html:{ multipart: true } do |f| %>
-    <span>Image</span>
-    <%= f.file_field :image %>
-    <div class="actions">
-      <%= f.submit "Add Image", class:"btn-flat"%>
-    </div>
-    <% end %>
-  </div>
-  <div class="container center-align show-content">
-    <div class="row center-align uploaded-show">
-      <div class="col s6 center-align">
-        <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("https://odi.osu.edu/assets/images/ODI/no_photo_icon.png") %>
-      </div>
-    </div>
-    <div class="post-content">
-      <div class="post-title">
-        <h5>
-          <a href="http://<%= @post.title %>"><%= @post.title%></a>
-        </h5>
-      </div>
-      <div class="media-body">
-        <p><%= @post.description %></p>
-      </div>
-    </div>
-    <div class="issue-support">
-      Support for this issue:
-      <a href="http://sfpublicworks.org/about/contact-us" target="_blank">Here</a>
-    </div>
-  </div>
-  <div class="show-images">
-    <div class="row center-align show-map">
-      <div class="col s6">
-        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=450x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", class: 'img-fluid img-rounded
-        google-map', alt: "#{@post.title} on the map"%>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="manip-buttons">
-  <div class="row center-align">
-    <div class="col s1">
-      <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
-    </div>
-    <div class="col s1">
-      <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
-    </div>
-  </div>
-</div>
-</div>
-<% else %>
 <div class="grey lighten-5 show-background">
 <div class="center-align lighten-4 back-button">
   <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
 </div>
+<div class="upload add-image">
+  <h3>Upload Image</h3>
+  <%= form_for :post, html:{ multipart: true } do |f| %>
+  <span>Image</span>
+  <%= f.file_field :image %>
+  <div class="actions">
+    <%= f.submit "Add Image", class:"btn-flat"%>
+  </div>
+  <% end %>
+</div>
 <div class="container center-align show-content2">
-  <div class="post-content2">
+  <div class="post-content">
     <div class="post-title">
       <h5>
         <a href="http://<%= @post.title %>"><%= @post.title%></a>
@@ -85,6 +39,49 @@
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=450x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", class: 'col s12 img-fluid img-rounded
     google-map', alt: "#{@post.title} on the map"%>
   </div>
+  <div class="manip-buttons center-align">
+    <div class="row center-align">
+      <div class="col s12">
+        <%= link_to "Edit Post", edit_post_path(@post.id), class:"waves-effect waves-light btn"%>
+      </div>
+      </div>
+      <div class="row center-align">
+        <div class="col s12">
+          <%= button_to "Delete", @post,class:"waves-effect waves-light btn delete-button", method: :delete %>
+        </div>
+    </div>
+  </div>
 </div>
+</div>
+<% else %>
+<div class="grey lighten-5 show-background">
+  <div class="center-align lighten-4 back-button">
+    <%= link_to "Back", posts_path, class:"waves-effect waves-light btn"%>
+  </div>
+  <div class="container center-align show-content2">
+    <div class="post-content2">
+      <div class="post-title">
+        <h5>
+          <a href="http://<%= @post.title %>"><%= @post.title%></a>
+        </h5>
+      </div>
+      <div class="media-body">
+        <p><%= @post.description %></p>
+      </div>
+      <div class="issue-support2">
+        Support for this issue:
+        <a href="http://sfpublicworks.org/about/contact-us" target="_blank">Here</a>
+      </div>
+    </div>
+    <div class="row center-align uploaded-show">
+      <div class="col s6">
+        <%= image_tag @post.image.url('medium'), :class => "user-img", :alt => image_alt("https://odi.osu.edu/assets/images/ODI/no_photo_icon.png") %>
+      </div>
+    </div>
+    <div class="show-map2 row">
+      <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@post.latitude},#{@post.longitude}&markers=#{@post.latitude},#{@post.longitude}&zoom=15&size=450x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", class: 'col s12 img-fluid img-rounded
+      google-map', alt: "#{@post.title} on the map"%>
+    </div>
+  </div>
 </div>
 <% end %>

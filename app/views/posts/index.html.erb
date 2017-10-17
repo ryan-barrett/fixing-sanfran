@@ -28,5 +28,8 @@
     <div class="center-align grey lighten-4 post-home">
       <%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
     </div>
+    <% if is_loggedin %>
+    <%= link_to "Log Out",logout_path, class:"waves-effect waves-light btn new-post"  %>
+    <% end %>
   </div>
 </div>
