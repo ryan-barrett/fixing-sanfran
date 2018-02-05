@@ -8,7 +8,7 @@
   height: 100%;
   width: 100%;
   vertical-align: bottom;
-  min-height: 700px;
+  min-height: 850px;
   background-size: cover;
   background-position: top;
   background-image: url("https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/SanFrancisco.jpg");
@@ -54,8 +54,10 @@
 
 .post-index {
   width: 70%;
+  height: 20%;
   position: relative;
   left: 15%;
+  // font-size: 20px !important;
 }
 
 .post-home {
@@ -66,8 +68,10 @@
 
 .manip-buttons {
   position: relative;
-  left: 41%;
-  bottom: 140px;
+  // left: 21%;
+  // bottom: 140px;
+  display: block;
+  text-align: center;
 }
 
 .edit-button {
@@ -77,8 +81,8 @@
 
 .post-content {
   position: relative;
-  left: 15%;
-  bottom: 160px;
+  // left: 17%;
+  bottom: 30px;
 }
 
 .back-button {
@@ -89,26 +93,29 @@
 .media-body {
   // border: 1px solid black;
   word-wrap: break-word;
-  position: relative;
-  left: 25%;
-  bottom: 40px;
-  width: 50%;
+  // position: relative;
+  // left: 30%;
+  // bottom: 40px;
+  // width: 40%;
 }
 
 .post-title {
   position: relative;
-  bottom: 55px;
+  padding-bottom: 15px;
+  word-wrap: break-word;
 }
 
 .show-images {
-  position: relative;
-  left: 17%;
+  // position: relative;
+  // left: 17%;
+  display: block;
+  text-align: center;
 }
 
 .add-image {
-  position: relative;
-  top: 85px;
-  left: 4%;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .uploaded-show {
@@ -118,7 +125,6 @@
 
 .show-content {
   position: relative;
-  bottom: 70px;
 }
 
 .show-content2 {
@@ -132,25 +138,23 @@
 }
 
 .show-background {
-  height: 1200px;
+  height: 800px;
 }
 
 .show-map {
-  position: relative;
-  left: 8%;
-  bottom: 160px;
+  // position: relative;
+  // left: 8%;
+  // bottom: 160px;
 }
 
 .issue-support {
-  position: relative;
-  left: 15%;
-  bottom: 140px;
+  padding-bottom: 20px;
 }
 
 .post-content2 {
-  position: relative;
-  left: 17%;
-  bottom: 160px;
+  // position: relative;
+  // left: 17%;
+  // bottom: 160px;
 }
 
 .uploaded-show2 {
@@ -159,13 +163,14 @@
 }
 
 .show-map2 {
-  position: relative;
-  left: 6%;
-  bottom: 80px;
+  // position: relative;
+  // left: 6%;
+  // bottom: 80px;
 }
 
 .issue-support2 {
   position: relative;
   left: 1%;
   top: 30px;
+  padding: 60px;
 }
