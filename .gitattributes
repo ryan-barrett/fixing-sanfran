@@ -1,1 +1,2 @@
-../app/assets/* linguist-vendored
+*.css  linguist-vendored=true
+*.javascript  linguist-vendored=true
